@@ -2,8 +2,13 @@
   "name": "weather",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.6"
   }
 }
