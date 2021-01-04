@@ -11,7 +11,14 @@ exports.getWeather = (req, res) => {
 
   axios.get(url)
     .then(response => {
-      console.log(`${response.data.name} 目前的溫度為 ${response.data.main.temp}`)
+      console.log(response)
+      res.render('index', {
+        cityTemp: `${response.data.name} 目前的溫度為攝氏 ${response.data.main.temp} 度`,
+        maxToMinTemp: `最高溫 ${response.data.main.temp_max} 度 - 最低溫 ${response.data.main.temp_min} 度`,
+        feelsLike: `體感溫度 ${response.data.main.feels_like} 度`,
+        cloud: `降雨機率 ${response.data.clouds.all}%`,
+        country: `所屬國家 ${response.data.sys.country}`
+      })
     })
     .catch(error => {
       console.log(error)
