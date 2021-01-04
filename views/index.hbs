@@ -34,12 +34,13 @@
     <div class="row">
       <div class="col-lg-12 text-center main">
         <div>
-          <h1 class="mt-5">{{ title }}</h1>
+          <h1 class="mt-5">Weather</h1>
           <p class="lead">請輸入一個城市或地區</p>
         </div>
         <div>
-          <form>
+          <form action="/" method="post">
             <input
+              name="city"
               type="text"
               class="form-control mb-3"
               style="margin: 0 auto; width: 60%;"
@@ -47,7 +48,7 @@
             <button class="btn btn-info">查詢</button>
           </form>
           <div class="mt-3">
-            當前為曼徹斯特，溫度為 -0
+            當前為曼徹斯特，溫度為 0
           </div>
         </div>
       </div>
